@@ -1,28 +1,31 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== Pusher Chat Demo
+Made from following this tutorial: http://hackersome.com/p/dwayne/pusher-realtime-chat-example
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Some changes made, following Pusher's own 'code examples' on their dashboard:
+
+
+JS version: https://github.com/breenatheseira/pusher-chat-demo/commit/98a5718de9349095a17a54ba8992e8b33e12b036
+
+
+Pusher URL: https://github.com/breenatheseira/pusher-chat-demo/commit/67af888a63c4a1f931cdb67bc196e0fb11865f4e
+
+Oh, and omitted the dotenv gem in favour for this answer to load environment variables: http://stackoverflow.com/a/11765775
+
+
+Just the plain, bare chat app across multi-channels.
+
+
+== Cloning?
+1. Sign up at http://pusher.com.
+2. Create an .env file in the root folder. .env file has to contain (replace the words in quotes with your keys):
+
+  ENV['PUSHER_APP_ID']='id'
+  ENV['PUSHER_KEY']='key'
+  ENV['PUSHER_SECRET']='secret'
+
+
+Run the app (rails s) across multiple tabs and chat away.
+
+== Discovered issues:
+Chat app won't work on first send. Needs to send twice.
