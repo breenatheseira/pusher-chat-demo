@@ -1,5 +1,5 @@
 <h1>ChatMessages</h1>
-<%= form_for @chat_message do |f| %>
+<%= form_for @chat_message, remote: true do |f| %>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
